@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Title Section -->
+        <header class="quiz-title-box">
+            <h1 id="quiz-title">Quiz</h1>
+        </header>
+
+        <!-- Name Entry Section -->
+        <div id="name-section">
+            <h2>Welcome to the Quiz!</h2>
+            <p>Please enter your name to start the quiz:</p>
+            <input type="text" id="user-name" placeholder="Enter your name">
+            <button id="startBtn">Start Quiz</button>
+        </div>
+
+        <!-- Quiz section (Initially hidden) -->
+        <div id="quiz-section" class="hide">
+            <p id="welcome-user">Hello, <span id="username-display"></span>!</p>
+
+            <div id="quiz">
+                <h2 id="question">Loading question...</h2>
+                <ul id="answers">
+                    <!-- Options will be dynamically added here -->
+                </ul>
+                <div class="quiz-footer">
+                    <p id="timer">Time left: <span id="time">15</span> seconds</p>
+                    <button id="nextBtn" disabled>Next Question</button>
+                    <p id="progress">Question <span id="current">1</span> of <span id="total">5</span></p>
+                </div>
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result section (Initially hidden) -->
+        <div id="result-section" class="hide">
+            <h2>Quiz Completed!</h2>
+            <p id="result-text">Your score is: <span id="score">0</span>%</p>
+            <div id="previous-attempts">
+                <h3>Previous Attempts</h3>
+                <ul id="attempts-list"></ul>
+            </div>
+            <button id="restartBtn">Restart Quiz</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
